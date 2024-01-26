@@ -1,0 +1,128 @@
+/* Обнуление */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html, body{
+	height: 100%;
+	width: 100%;
+	font-style: 100%;
+	line-height: 1;
+	font-style: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit;}
+
+input::-ms-clear{display:none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style-type: none;}
+img{vertical-align: top;}
+
+h1,h2, h3, h4, h5, h6{font-style: inherit; font-weight: 400;}
+
+/* ============================================== */
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	background: linear-gradient(135deg, purple, blue);
+}
+
+body {
+	background: #fff;
+}
+
+/* ============================================== */
+.input__block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.input__header {
+	margin-bottom: 30px;
+	color: white;
+	font-weight: 600;
+}
+
+.input__username {
+	border-bottom: 1px solid #000;
+	font-size: 40px;
+	opacity: 0.9;
+}
+
+.input__password {
+	padding-top: 20px;
+	border-bottom: 1px solid #000;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+
+.input__form {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	background-color: white;
+	padding: 30px 40px;
+}
+
+.input__button {
+	padding: 20px 0px;
+	background-color: #25ce87;
+	color: white;
+	font-size: 30px;
+	font-weight: 600;
+	border-radius: 20px;
+}
+
+.input__registration {
+	text-align: center;
+}
+
+.input__signup {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	background-color: white;
+	padding: 30px 40px;
+}
+
+
+.workspace__input {
+	border: 1px solid #000;
+}
+.workspace__description {
+	border: 1px solid #000;
+}
+
+.workspace1__form {
+	padding: 15px;
+}
+
+.workspace__button {
+	padding: 10px 15px;
+	font-size: 15px;
+	font-weight: 500;
+	border-radius: 20px;
+	background-color: #000;
+	color: #fff;
+}

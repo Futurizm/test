@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:5000/workspace-demo1" method="post" class="workspace1__form"> 
+        <label for="workspace__input">Title:</label>
+        <input type="text" class="workspace__input" id="workspace__input" name="title">
+        <label for="workspace__description">Description:</label>
+        <input type="text" class="workspace__description" id="workspace__description" name="description">
+        <button type="submit" class="workspace__button">Create Workspace list</button>
+    </form>
+
+    <% if (messages.error) { %>
+        <script>
+            alert('<%= messages.error[0] %>');
+        </script>
+    <% } %>
+
+    <% if (data && data.length > 0) { %>
+        <ul>
+            <% data.forEach(entry => { %>
+                <li>
+                    <strong>Title:</strong> <%= entry.title %>, 
+                    <strong>Description:</strong> <%= entry.description %>
+                    <form action="/delete-item/<%= entry.id %>" method="post" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No data available</p>
+    <% } %>
+</body>
+</html>

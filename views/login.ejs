@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="input__block">
+            <h1 class="input__header">Login</h1>
+            <form action="http://localhost:5000/login" method="post" class="input__form">
+                <input name="username" placeholder="username" type="text" class="input__username">
+                <input name="password" placeholder="password" type="password" class="input__password">
+                <button type="submit" class="input__button">Login</button>
+            </form>
+            <% if (messages.error) { %>
+                <script>
+                    alert('<%= messages.error[0] %>');
+                </script>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
